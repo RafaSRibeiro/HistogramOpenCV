@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <BorderPane>
+            <center>
+                <ImageView fx:id="currentFrame" />
+            </center>
+            <right>
+                <VBox alignment="CENTER_LEFT" spacing="10">
+                    <padding>
+                        <Insets left="25" right="25"/>
+                    </padding>
+                    <ImageView fx:id="histogram" />
+                    <Text text="Controls" />
+                    <CheckBox fx:id="grayscale" text="Show in gray scale" />
+                </VBox>
+            </right>
+            <bottom>
+                <HBox alignment="CENTER" >
+                    <padding>
+                        <Insets top="25" right="25" bottom="25" left="25"/>
+                    </padding>
+                    <Button fx:id="button" alignment="center" text="Start camera" onAction="#startCamera" />
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </children>
+</GridPane>
